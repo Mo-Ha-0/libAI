@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=64", "pybind11>=2.10"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "libAI"
+version = "1.0.0"
+description = "Neural network library with parallel C++ backend (OpenMP)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Mohammad"}]
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+include = ["libAI*"]

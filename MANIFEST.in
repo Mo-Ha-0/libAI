@@ -1,0 +1,9 @@
+include include/libAI/core/*.hpp
+include include/libAI/layers/*.hpp
+include include/libAI/optimizers/*.hpp
+include include/libAI/*.hpp
+include src/layers/*.cpp
+include src/optimizers/*.cpp
+include src/*.cpp
+include bindings/bindings.cpp
+recursive-include libAI *.py
