@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="c1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d2ff"/>
+      <stop offset="100%" style="stop-color:#3a7bd5"/>
+    </linearGradient>
+    <linearGradient id="c2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7971e"/>
+      <stop offset="100%" style="stop-color:#ffd200"/>
+    </linearGradient>
+    <linearGradient id="c3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ee9ca7"/>
+      <stop offset="100%" style="stop-color:#ffdde1"/>
+    </linearGradient>
+    <linearGradient id="c4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e"/>
+      <stop offset="100%" style="stop-color:#38ef7d"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="900" height="620" rx="12" fill="url(#bg)"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">libAI Architecture</text>
+
+  <!-- Python Layer -->
+  <rect x="300" y="60" width="300" height="40" rx="8" fill="url(#c2)" filter="url(#shadow)" opacity="0.9"/>
+  <text x="450" y="86" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Python API (Sequential, Tensor)</text>
+  <text x="450" y="120" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ffd200" text-anchor="middle">High-level Keras-like interface</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="140" x2="450" y2="175" stroke="#3a7bd5" stroke-width="2"/>
+  <polygon points="450,178 444,168 456,168" fill="#3a7bd5"/>
+
+  <!-- Bindings Layer -->
+  <rect x="300" y="180" width="300" height="40" rx="8" fill="url(#c3)" filter="url(#shadow)" opacity="0.9"/>
+  <text x="450" y="206" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="bold" fill="#333" text-anchor="middle">pybind11 Bindings</text>
+  <text x="450" y="240" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#ee9ca7" text-anchor="middle">C++ / Python interop</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="260" x2="450" y2="295" stroke="#3a7bd5" stroke-width="2"/>
+  <polygon points="450,298 444,288 456,288" fill="#3a7bd5"/>
+
+  <!-- C++ Core Layer -->
+  <rect x="220" y="300" width="460" height="40" rx="8" fill="url(#c1)" filter="url(#shadow)" opacity="0.9"/>
+  <text x="450" y="326" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">C++17 Core Engine</text>
+  <text x="450" y="360" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#00d2ff" text-anchor="middle">OpenMP-parallelized tensor &amp; neural network operations</text>
+
+  <!-- Sub-modules -->
+  <rect x="70" y="410" width="170" height="50" rx="6" fill="#1a1a3e" stroke="#3a7bd5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="155" y="435" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold" fill="#00d2ff" text-anchor="middle">Tensor Core</text>
+  <text x="155" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#667799" text-anchor="middle">Matmul, Transpose, Reductions</text>
+
+  <rect x="270" y="410" width="170" height="50" rx="6" fill="#1a1a3e" stroke="#f7971e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="355" y="435" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold" fill="#f7971e" text-anchor="middle">Layers</text>
+  <text x="355" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#667799" text-anchor="middle">Dense, Dropout, BatchNorm</text>
+
+  <rect x="470" y="410" width="170" height="50" rx="6" fill="#1a1a3e" stroke="#ee9ca7" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="555" y="435" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold" fill="#ee9ca7" text-anchor="middle">Activations</text>
+  <text x="555" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#667799" text-anchor="middle">ReLU, Sigmoid, Tanh, Linear</text>
+
+  <rect x="670" y="410" width="170" height="50" rx="6" fill="#1a1a3e" stroke="#11998e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="755" y="435" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold" fill="#11998e" text-anchor="middle">Optimizers</text>
+  <text x="755" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#667799" text-anchor="middle">SGD, Momentum, Adam</text>
+
+  <rect x="70" y="480" width="170" height="50" rx="6" fill="#1a1a3e" stroke="#38ef7d" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="155" y="505" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold" fill="#38ef7d" text-anchor="middle">Loss Functions</text>
+  <text x="155" y="522" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#667799" text-anchor="middle">MSE, SoftmaxCrossEntropy</text>
+
+  <rect x="270" y="480" width="170" height="50" rx="6" fill="#1a1a3e" stroke="#00d2ff" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="355" y="505" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold" fill="#00d2ff" text-anchor="middle">NeuralNetwork</text>
+  <text x="355" y="522" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#667799" text-anchor="middle">Layer container &amp; inference</text>
+
+  <rect x="470" y="480" width="170" height="50" rx="6" fill="#1a1a3e" stroke="#f7971e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="555" y="505" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold" fill="#f7971e" text-anchor="middle">Trainer</text>
+  <text x="555" y="522" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#667799" text-anchor="middle">Mini-batch training loop</text>
+
+  <rect x="670" y="480" width="170" height="50" rx="6" fill="#1a1a3e" stroke="#ee9ca7" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="755" y="505" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold" fill="#ee9ca7" text-anchor="middle">HyperparameterTuner</text>
+  <text x="755" y="522" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#667799" text-anchor="middle">Grid search</text>
+
+  <!-- Lines from C++ Core to modules -->
+  <line x1="290" y1="340" x2="155" y2="408" stroke="#3a7bd5" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="370" y1="340" x2="355" y2="408" stroke="#3a7bd5" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="530" y1="340" x2="555" y2="408" stroke="#3a7bd5" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="620" y1="340" x2="755" y2="408" stroke="#3a7bd5" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- Bottom badge -->
+  <rect x="250" y="565" width="400" height="35" rx="17" fill="none" stroke="#3a7bd5" stroke-width="1" opacity="0.5"/>
+  <text x="450" y="588" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#667799" text-anchor="middle">Zero external runtime dependencies · No NumPy required</text>
+</svg>
