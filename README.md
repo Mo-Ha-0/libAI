@@ -1,6 +1,22 @@
+# The goal of building the library
+
+I wanted to experiment with building a low-level framework so bad — to the point where I literally started without any planning. I ported the code from my existing GitHub repository (BeyondersTensorflow) from Python to C++, and to work more closely with low-level code, I implemented a tensor type.
+
+In the future, **<font size="+1">If Allah wills</font>**, I will attempt to build a comprehensive, professional-grade framework using C++ and, most likely, Rust. <font size="+2">🫡</font>
+
+### So, if you explore this framework and find it useful, please wish me good luck. <font size="+2">🥹</font>
+
 # libAI
 
 C++ neural network library with Python bindings. Parallel execution via OpenMP.
+
+#### the framework is not available in pip now, so to try it you can run:
+
+```
+python -m build
+
+pip install dist/libai-1.0.0-cp312-cp312-linux_x86_64.whl
+```
 
 ## Quick start
 
